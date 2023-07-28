@@ -12,7 +12,7 @@ const staticPath = `${__dirname}/views`;
 
 app.set("view engine", "ejs")
 
-app.use(express.static(staticPath))
+app.use(express.static(__dirname + '/'));
 
 const PORT = 3000 || process.env.PORT;
 const file = fs.readFileSync(`${__dirname}/views/data.json`);
