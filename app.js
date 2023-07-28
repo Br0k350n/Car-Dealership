@@ -15,7 +15,7 @@ app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/'));
 
 const PORT = 3000 || process.env.PORT;
-const file = fs.readFileSync(`${__dirname}/views/data.json`);
+const file = fs.readFileSync(`${__dirname}/data.json`);
 const json = JSON.parse(file.toString())
 
 
@@ -47,7 +47,7 @@ app.post('/admin', (req,res) => {
         price: req.body.price
     }
     json.push(temp);
-    fs.writeFileSync(`${__dirname}/views/data.json`, JSON.stringify(json))
+    fs.writeFileSync(`${__dirname}/data.json`, JSON.stringify(json))
 
     res.redirect("/inventory");
 })
