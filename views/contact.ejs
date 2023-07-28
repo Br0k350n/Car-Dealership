@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <%- include('partials/preloader.ejs') %>
+    <div class="box-w80 ">
+        <div class="box-w100">
+            <div id="contact-title" class=" box-w100 flex-c dark-box">
+                <div class="h1-wrapper"><h1>Contact us</h1></div>
+            </div>
+        </div>
+    </div>
+    <div class="box-w80 flex-c  dark-box contact-btn__div">
+        <div class="box-w25">
+            <img src="/imgs/logo.jpg" alt="" class="box-w100">
+        </div>
+        <button id="contactus-btn">Contact Us Here</button>
+    </div>
+    
+    <div class="modal close" id="contact-modal">
+        <div class="modal-content">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <img src="/imgs/logo.jpg" alt="" id="contact-logo">
+                </div>
+                <div class="contact-right">
+                    <h2>Contact Us</h2>
+
+                    <div>
+                        <h2>Email</h2>
+                        <p><a href="mailto:david@roycemadison.com">david@roycemadison.com</a></p>
+                        <h2>Phone Number</h2>
+                        <p><a href="tel:+8643408802">(864)340-8802</a></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

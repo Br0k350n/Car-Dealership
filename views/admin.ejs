@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <%- include('partials/preloader.ejs') %>
+    <div class="box-w80 dark-box flex-c flex-center">
+        <form action="/admin" method="post" id="admin-form" class="box-w80">
+            <div class="inputField">
+                <label for="name">Car Name</label>
+                <input type="text" name="name" id="carName" required>
+            </div>
+            <div class="inputField">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="carPrice" required>
+            </div>
+            <div class="inputField">
+                <label for="carDescription">Car description (250 Character Limit)</label>
+                <textarea maxlength="250" name="carDescription" id="carDescription" required></textarea>
+            </div>
+            
+            <button type="submit" id="add-btn">Add Car to Database</button>
+        </form>
+    </div>
+    
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
