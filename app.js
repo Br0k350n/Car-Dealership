@@ -8,9 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const fs = require('fs');
 
-const staticPath = `${__dirname}/views`;
 
 app.set("view engine", "ejs")
+
+app.set('views', path.join(__dirname, '/'));
 
 app.use(express.static(__dirname + '/'));
 
