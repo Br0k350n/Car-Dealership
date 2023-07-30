@@ -9,9 +9,9 @@ app.use(express.json());
 const fs = require('fs');
 
 
-app.set("view engine", "ejs")
+// app.set("view engine", "ejs")
 
-app.set('views', path.join(__dirname, '/'));
+// app.set('views', path.join(__dirname, '/'));
 
 app.use(express.static(__dirname + '/'));
 
@@ -21,23 +21,23 @@ const json = JSON.parse(file.toString())
 
 
 app.get('/', (req,res) => {
-    res.render('index');
+    res.sendFile(`${__dirname}/index.html`);
 })
 
 app.get('/inventory', (req,res) => {
-    res.render('inventory')
+    res.sendFile(`${__dirname}/inventory.html`)
 })
 
 app.get('/about', (req,res) => {
-    res.render('about')
+    res.sendFile(`${__dirname}/about.html`)
 })
 
 app.get('/contact', (req,res) => {
-    res.render('contact')
+    res.sendFile(`${__dirname}/contact.html`)
 })
 
 app.get('/admin', (req,res) => {
-    res.render('admin')
+    res.sendFile(`${__dirname}/admin.html`)
 })
 
 app.post('/admin', (req,res) => {
@@ -50,7 +50,7 @@ app.post('/admin', (req,res) => {
     json.push(temp);
     fs.writeFileSync(`${__dirname}/data.json`, JSON.stringify(json))
 
-    res.redirect("/inventory");
+    res.redirect(`${__dirname}/inventory.html`);
 })
 
 
