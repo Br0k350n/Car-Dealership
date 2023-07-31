@@ -1,10 +1,14 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
 body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     margin: auto;
     padding: 0;
     -ms-overflow-style: none;   /* Scrollbar removal */
@@ -17,7 +21,26 @@ body::-webkit-scrollbar { /* Scrollbar removal */
     display: none;
 }
 
-
+button {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 24px;
+    box-shadow: none;
+    border-style: solid;
+    color: #ffffff;
+    border-color: #c0ccff;
+    background-color: #010824;
+    overflow: hidden;
+}
+#cta {
+    padding: 75px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* Utility */
 
     /* Animations */
@@ -66,12 +89,15 @@ body::-webkit-scrollbar { /* Scrollbar removal */
 
         .pad-75px0 {padding: 75px 0;}
 
-        .h1-wrapper {padding: 15px;}
+        .h1-wrapper {padding: 15px; display: flex; flex-direction: column; justify-content: center;
+        align-items: center;}
     /* Color Classes */
 
-        .dark-box {color: #fff; background:#1e2e79;}
+        .dark-box {color: #fff; background:#1e2e79; -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);}
 
-        .light-box {color: #000; background-color: #fff;}
+        .light-box {color: #ffffff; background-color: #2a3878;}
 
 /* Utility [END] */
 
@@ -136,36 +162,35 @@ body::-webkit-scrollbar { /* Scrollbar removal */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 #header {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: white;
     overflow: hidden;
+    
 }
 
 #header__logo {
-    width: 250px;
+    width: 150px;
 }
 
 .nav-container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    background-image: url('/imgs/bg.png');
-    background-size: cover;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25); /* Background Image Overlay */
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #0b1540;
+    /* background-image: url('/imgs/bg.png');
+    background-size: cover; */
+    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25); Background Image Overlay */
     overflow: hidden;
+    
 }
 
 .nav-list {
@@ -176,7 +201,7 @@ body::-webkit-scrollbar { /* Scrollbar removal */
     align-items: center;
     padding: 0;
     text-decoration: none;
-    width: 45%;
+    width: 25%;
 }
 
 .nav-item {
@@ -250,12 +275,23 @@ footer .nav-container {
     padding: 100px 0;
     font-size: 50px;
     width: 100%;
-    background-image: url('/imgs/car.jpg');
-    background-size: cover;
+    /* background-image: url('/imgs/car.jpg');
+    background-size: cover; */
     background-position: center -150px;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); /* Background Image Overlay */
+    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); Background Image Overlay */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
-#home-title h1 {
+#home-title img {
+    width: 750px;
+    border-radius: 5px;
+}
+#home-title h2,
+#home-title h5 {
     margin: 0;
 }
 #home-content {
@@ -265,8 +301,40 @@ footer .nav-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: #2a3878;
+    gap: 15px;
+}
+#home-btn {
+    font-size: 16px;
 }
 
+#popular-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:80%;
+    gap: 15px;
+    
+}
+.popular-models {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0;
+}
+.pop-item {
+    width: 510px;
+    flex-direction: column;
+    font-size: 14px;
+    height: 300px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.pop-item > .car-item-box {
+    width: 80%;
+}
 
 /* Homepage [END] */
 
@@ -448,6 +516,7 @@ textarea {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
+    box-shadow: none;
 }
 .car-item-box {
     width: 33%;
@@ -466,16 +535,16 @@ textarea {
         background-position: center -50px;
     }
 } 
-@media screen and (max-width: 1130px) and (min-width: 686px)  {
+@media screen and (max-width: 1242px) and (min-width: 686px)  {
     #inventory-title,
     #home-title,
     #about-title,
     #contact-title {
         background-position: center center;
     }
-
-    #nav-container {
-        width: 100%;
+    #home-title img {
+        width: 50%;
+        border-radius: 10px;
     }
     #header {
         width: 100%;
@@ -485,7 +554,7 @@ textarea {
         width: auto;
     }
     .nav-list {
-        width: 98%;
+        width: 50%;
     }
     #carName,
     #carPrice,
@@ -512,6 +581,13 @@ textarea {
     #admin-form {
         padding: 50px 0;
     }
+    .h1-wrapper h2 {
+        font-size: 32px;
+    }
+    .h1-wrapper h5 {
+        font-size: 20px;
+    }
+
 } 
 @media screen and (max-width: 685px) {
     #nav-container {
@@ -520,6 +596,15 @@ textarea {
     #header {
         width: 100%;
     }
+    #home-title {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #home-title img {
+        width: 75%;
+        border-radius: 10px;
+    }
     #inventory-title,
     #home-title,
     #about-title,
@@ -527,6 +612,8 @@ textarea {
         background-position: center center;
         justify-content: center;
         text-align: center;
+        width: 100vw;
+        box-shadow: none;
     }
 
     footer > div.box-w80 > div {
@@ -579,7 +666,7 @@ textarea {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         transition: all 0.5s ease-in-out;
     }
@@ -600,7 +687,7 @@ textarea {
         display: none;
     }
     #navBar__wrapper a.icon {
-        float: right;
+        /* float: right; */
         display: block;
     }
     #navBar {
@@ -614,11 +701,12 @@ textarea {
         font-size: 24px;
         padding: 16px 15px;
     }
-    #navBar__wrapper.responsive {position: relative;}
+    #navBar__wrapper.responsive {
+        position: relative;
+        align-items: flex-start;
+    }
     #navBar__wrapper.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+        margin-top: 15px;
         transition: all 0.5s ease-in-out;
     }
     #navBar.responsive li {
