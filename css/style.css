@@ -145,6 +145,7 @@ body::-webkit-scrollbar { /* Scrollbar removal */
     justify-content: space-between;
     align-items: center;
     color: white;
+    overflow: hidden;
 }
 
 #header__logo {
@@ -164,6 +165,7 @@ body::-webkit-scrollbar { /* Scrollbar removal */
     -moz-border-radius-topright: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    overflow: hidden;
 }
 
 .nav-list {
@@ -183,6 +185,12 @@ body::-webkit-scrollbar { /* Scrollbar removal */
 }
 
 .nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-container .icon {
+    display:none;
     text-decoration: none;
     color: inherit;
 }
@@ -450,19 +458,211 @@ textarea {
 
 /* Responsiveness */
 
-@media screen and (max-width: 1236px) and (min-width: 1130px) {
+@media screen and (max-width: 1236px) and (min-width: 1131px) {
     #inventory-title,
     #home-title,
-    #about-title {
+    #about-title,
+    #contact-title {
         background-position: center -50px;
     }
 } 
-@media screen and (max-width: 1130px)  {
+@media screen and (max-width: 1130px) and (min-width: 686px)  {
     #inventory-title,
     #home-title,
-    #about-title {
-        background-position: center -50px;
+    #about-title,
+    #contact-title {
+        background-position: center center;
     }
 
-    
-}  
+    #nav-container {
+        width: 100%;
+    }
+    #header {
+        width: 100%;
+    }
+
+    footer > div.box-w80 > div {
+        width: auto;
+    }
+    .nav-list {
+        width: 98%;
+    }
+    #carName,
+    #carPrice,
+    #add-btn {
+        width: 50%;
+        height: 25px;
+    }
+    textarea {
+        resize: none;
+        width: 50%;
+        height: 80px;
+    }
+    label[for=name],
+    label[for=price],
+    label[for=carDescription] {
+        font-size: 12px;
+    }
+    #add-btn {
+        font-size: 12px;
+    }
+    .box-w80 {
+        width: 100%;
+    }
+    #admin-form {
+        padding: 50px 0;
+    }
+} 
+@media screen and (max-width: 685px) {
+    #nav-container {
+        width: 100%;
+    }
+    #header {
+        width: 100%;
+    }
+    #inventory-title,
+    #home-title,
+    #about-title,
+    #contact-title {
+        background-position: center center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer > div.box-w80 > div {
+        width: auto;
+    }
+    .nav-list {
+        width: auto;
+        text-align: left;
+        align-items: flex-start;
+    }
+    #carName,
+    #carPrice,
+    #add-btn {
+        width: 50%;
+        height: 25px;
+    }
+    textarea {
+        resize: none;
+        width: 50%;
+        height: 80px;
+    }
+    label[for=name],
+    label[for=price],
+    label[for=carDescription] {
+        font-size: 12px;
+    }
+    #add-btn {
+        font-size: 12px;
+    }
+    .box-w80 {
+        width: 100%;
+    }
+    #admin-form {
+        padding: 50px 0;
+    }
+    footer > div.box-w80 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #inventory-title h1,
+    #home-title h1,
+    #about-title h1,
+    #contact-title h1 {
+        font-size: 40px;
+    }
+    .box-w25 {
+        width: 50%;
+    }
+    .nav-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-left,
+    .contact-right {
+        width:100%;
+    }
+    .contact-left {
+        border-radius: 10px;
+    }
+    .contact-right * {
+        margin: 5px 0;
+    }
+    #navBar li:not(:first-child) {
+        display: none;
+    }
+    #navBar__wrapper a.icon {
+        float: right;
+        display: block;
+    }
+    #navBar {
+        flex-direction: column;
+    }
+    #nav {
+        display: block;
+        /* padding-top: 0; */
+    }
+    .icon {
+        font-size: 24px;
+        padding: 16px 15px;
+    }
+    #navBar__wrapper.responsive {position: relative;}
+    #navBar__wrapper.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    #navBar.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+        transition: all 0.5s ease-in-out;
+    }
+    #navBar__wrapper.responsive .dropdown {float: none;}
+    #navBar__wrapper.responsive .dropdown-content {position: relative;}
+    #navBar__wrapper.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+        transition: all 0.5s ease-in-out;
+    }
+    .car-item {
+        flex-direction: column;
+    }
+    .car-item-box {
+        width: 90%;
+    }
+    .car-item-box h1 {
+        font-size: 26px;
+    }
+    .carDesc {
+        font-size: 14px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .icon {
+        font-size: 16px;
+    }
+    #contactus-btn {
+        font-size: 16px;
+        width: 150px;
+        height: 40px;
+    }
+    #home-content p,
+    #about-content p {
+        font-size: 14px;
+    }
+    #header__logo {
+        width: 100px;
+    }
+}
