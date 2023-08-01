@@ -476,7 +476,7 @@ footer .nav-container {
 }
 textarea {
     resize: none;
-    width: 40%;
+    width: 25%;
     height: 80px;
 }
 
@@ -484,9 +484,16 @@ textarea {
 #carPrice,
 #add-btn {
     width: 25%;
+    
+}
+#carName,
+#carPrice {
     height: 25px;
 }
-
+#add-btn {
+    height: 50px;
+    font-size: 18px;
+}
 
 
 #admin-form {
@@ -568,7 +575,13 @@ textarea {
     #carPrice,
     #add-btn {
         width: 50%;
+    }
+    #carName,
+    #carPrice {
         height: 25px;
+    }
+    #add-btn {
+        height: 50px;
     }
     textarea {
         resize: none;

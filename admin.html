@@ -21,8 +21,8 @@
 <body>
     <div id="header__wrapper">
         <div id="header">
-            <img src="/imgs/logo.jpg" alt="BestStop, Everything you need in a car" id="header__logo">
             <div class="nav-container" id="navBar__wrapper">
+                <img src="/imgs/logo.jpg" alt="BestStop, Everything you need in a car" id="header__logo">
                 <ul class="nav-list" id="navBar">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/inventory">Inventory</a></li>
@@ -44,8 +44,17 @@
         
      
     </div>
-    <div class="box-w80 dark-box flex-c flex-center">
+    <div class="box-w100 ">
+        <div class="box-w100">
+            <div id="inventory-title" class=" box-w100 flex-c dark-box">
+            <div class="h1-wrapper"><h2>Administrative Panel</h2></div>
+            <img src="/imgs/admin.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="box-w100 light-box flex-c flex-center">
         <form action="/admin" method="post" id="admin-form" class="box-w80">
+            <h1>Add a New Vehicle</h1>
             <div class="inputField">
                 <label for="name">Car Name</label>
                 <input type="text" name="name" id="carName" required>
@@ -61,6 +70,10 @@
             
             <button type="submit" id="add-btn">Add Car to Database</button>
         </form>
+        <div class="dark-box" id="cta">
+            <h1>Contact Us Today!</h1>
+            <a href="/contact"><button id="contactus-btn">Contact Us</button></a>
+        </div>
     </div>
     
     <footer class="box-w100 flex-c flex-center">
