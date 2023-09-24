@@ -8,15 +8,17 @@ $(document).ready(function() {
     $.getJSON('data.json', function (data) {
         for (let i in data) {
             let carName = data[i].carName;
+            let carImg = data[i].carImg;
             console.log(carName)
-            let output = '<div class="car-item dark-box pad-15px flex-r box-w50" id="car-'+ i +'"><div class="car-item-box flex-c flex-center"><h1>'+ carName +'</h1></div><div class="flex-c flex-center car-item-box"><h3>Description</h3><p class="carDesc">'+ data[i].carDescription +'</p></div><div class="box-w25 flex-r flex-center car-item-box"><h3>Price:</h3><h4>'+ data[i].price +'</h4></div></div>';
+            let output = '<div class="car-item flex-r box-w50" id="car-'+ i +'"><div class="car-item-box flex-c flex-center carImg-box"><img src="'+ carImg +'" class="car-item-img" alt=""></div><div class="car-item-box flex-c flex-center"><h1>'+ carName +'</h1></div><div class="flex-c flex-center car-item-box"><h3>Description</h3><p class="carDesc">'+ data[i].carDescription +'</p></div><div class="box-w25 flex-r flex-center car-item-box car-price"><h3>Price:</h3><h4>$ '+ data[i].price.toLocaleString('en-us') +'</h4></div></div>';
             invContainer.append(output);
         }
         for (let i in data) {
             if (i < 4) {
                 let carName = data[i].carName;
+                let carImg = data[i].carImg;
                 console.log(carName)
-                let output = '<div class="car-item pop-item dark-box pad-15px flex-r" id="car-'+ i +'"><div class="car-item-box flex-c flex-center"><h1>'+ carName +'</h1></div><div class="flex-c flex-center car-item-box"><h3>Description</h3><p class="carDesc">'+ data[i].carDescription +'</p></div><div class="box-w25 flex-r flex-center car-item-box"><h3>Price:</h3><h4>'+ data[i].price +'</h4></div></div>';
+                let output = '<div class="car-item pop-item pad-15px flex-r" id="car-'+ i +'"><div class="car-item-box flex-c flex-center carImg-box"><img src="'+ carImg +'" class="car-item-img" alt=""></div><div class="car-item-box flex-c flex-center"><h1>'+ carName +'</h1></div><div class="box-w25 flex-r flex-center car-item-box car-price"><h3>Price:</h3><h4>$ '+ data[i].price.toLocaleString('en-us') +'</h4></div></div>';
                 popContainer.append(output);
             }
         }

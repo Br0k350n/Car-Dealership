@@ -34,6 +34,13 @@
             </div>
         </div>
     </div>
+    <div id="header__wrapper_a">
+        <div id="header_a">
+            <div class="nav-container" id="navBar__wrapper_a">
+                <h3 id="subtitle" style="margin-left: 50px;">Administrative Panel</h3>
+            </div>
+        </div>
+    </div>
     <div id="loader-wrapper">
         <div id="loader"></div>
      
@@ -44,16 +51,8 @@
         
      
     </div>
-    <div class="box-w100 ">
-        <div class="box-w100">
-            <div id="inventory-title" class=" box-w100 flex-c dark-box">
-            <div class="h1-wrapper"><h2>Administrative Panel</h2></div>
-            <img src="/imgs/admin.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="box-w100 light-box flex-c flex-center">
-        <form action="/admin" method="post" id="admin-form" class="box-w80">
+    <div class="box-w100 light-box flex-c flex-center" id="admin-container">
+        <form action="/admin" method="POST" id="admin-form" class="box-w80">
             <h1>Add a New Vehicle</h1>
             <div class="inputField">
                 <label for="name">Car Name</label>
@@ -70,10 +69,6 @@
             
             <button type="submit" id="add-btn">Add Car to Database</button>
         </form>
-        <div class="dark-box" id="cta">
-            <h1>Contact Us Today!</h1>
-            <a href="/contact"><button id="contactus-btn">Contact Us</button></a>
-        </div>
     </div>
     
     <footer class="box-w100 flex-c flex-center">

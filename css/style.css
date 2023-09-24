@@ -93,11 +93,9 @@ button {
         align-items: center;}
     /* Color Classes */
 
-        .dark-box {color: #fff; background:#1e2e79; -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
-            box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);}
+        .dark-box {color: #000; background:#dde1f3;}
 
-        .light-box {color: #ffffff; background-color: #4557ad;}
+        .light-box {color: #000; background-color: #eff1fb;}
 
 /* Utility [END] */
 
@@ -164,7 +162,19 @@ button {
     align-items: center;
     color: white;
 }
-
+#header__wrapper_a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    color: white;
+    background-color: #0b1540;
+}
+#admin-container {
+    height: 75vh;
+}
 #header {
     width: 100%;
     display: flex;
@@ -175,19 +185,16 @@ button {
 }
 
 #header__logo {
-    width: 150px;
+    width: 85px;
 }
 
 .nav-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
-    /* background-image: url('/imgs/bg.png');
-    background-size: cover; */
-    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25); Background Image Overlay */
     overflow: hidden;
-    
+    align-items: center;
 }
 
 .nav-list {
@@ -199,11 +206,13 @@ button {
     padding: 0;
     text-decoration: none;
     width: 25%;
+    margin: 0;
+    height: 5vh;
 }
 
 .nav-item {
     padding: 10px;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .nav-link {
@@ -274,24 +283,35 @@ footer .nav-container {
     font-size: 50px;
     width: 100%;
     gap: 15px;
-    /* background-image: url('/imgs/car.jpg');
-    background-size: cover; */
     background-position: center -150px;
-    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); Background Image Overlay */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
-            box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+#home-title-box > div {
+    width: 50%;
+}
+#home-title-box > #home-header {
+    width: 25%;
+}
+#home-title-box {
+    justify-content: space-between;
 }
 #home-title img {
-    width: 25%;
-    border-radius: 5px;
+    width: 50%;
+    border-radius: 15px;
+}
+#home-header,
+#home-header a {
+    align-items: flex-start;
+    width: 100%;
 }
 #home-title h2,
-#home-title h5 {
+#home-title p {
     margin: 0;
+}
+#home-title p {
+    font-size: 20px;
 }
 #home-content {
     padding: 15px 30px;
@@ -306,14 +326,22 @@ footer .nav-container {
 }
 #home-btn {
     font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #ffffff;
+    border-style: none;
+    background-color: #182249;
+    overflow: hidden;
+    margin-top: 75px;
 }
 
 #popular-container {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width:80%;
     gap: 15px;
-    
 }
 .popular-models {
     display: flex;
@@ -321,18 +349,31 @@ footer .nav-container {
     justify-content: center;
     align-items: center;
     padding: 75px 0;
+    width: 100%;
 }
-.pop-item {
-    width: 510px;
+#popular-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.pop-item.car-item {
+    width: 25%;
     flex-direction: column;
     font-size: 14px;
     height: 300px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    justify-content: center;
 }
 .pop-item > .car-item-box {
     width: 80%;
+    padding: 15px;
+}
+.carImg-box {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.car-price {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /* Homepage [END] */
@@ -347,7 +388,6 @@ footer .nav-container {
     background-image: url('/imgs/about.jpg');
     background-size: cover;
     background-position: center -150px;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); /* Background Image Overlay */
 }
 
 #about-title p {
@@ -356,7 +396,17 @@ footer .nav-container {
 #about-content {
     text-align: center;
 }
-
+.about-text {
+    display: flex;
+    align-items: flex-end;
+}
+.about-text h1 {
+    margin-right: 28%;
+}
+.about-p {
+    width: 50%;
+    text-align: left;
+}
 /* About [END] */
 
 /* Contact */
@@ -394,7 +444,7 @@ footer .nav-container {
     background-image: url('/imgs/contact-bg.jpg');
     background-size: cover;
     background-position: center -250px;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); /* Background Image Overlay */
+    /* box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45); Background Image Overlay */
 }
 
 
@@ -411,9 +461,20 @@ footer .nav-container {
 }
 
 .contact-btn__div {
-    padding: 100px 0;
-    justify-content: space-evenly;
+    padding: 0;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
+    height: 75vh;
+}
+
+#contact-logo-container {
+    background-color: #0b1540;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #contactus-btn {
@@ -426,6 +487,34 @@ footer .nav-container {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+#contact-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contact-section h2 {
+    font-size: 50px;
+}
+
+.contact-section p {
+    font-size: 25px;
 }
 
 .contact-left {
@@ -499,7 +588,7 @@ textarea {
 #admin-form {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #06060b;
     padding: 50px;
     gap: 15px;
     align-items: center;
@@ -510,29 +599,54 @@ textarea {
 /* Inventory */
 #inventory-title {
     padding: 0;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 70vh
 }
 
+#inventory-title #inventory-img {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+}
 #inventory-title img {
     width: 50%;
-    /* border-radius: 5px; */
+    height: auto;
+    border-radius: 15px;
 }
 #inventory-container {
-    background-color: #2a3878;
+    background-color: #dde1f3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#inventory-container .car-item .car-item-box {
+    width: 75%;
+    text-align: center;
+    padding: 5px;
 }
 .car-item {
-    text-align: center;
-    margin: 10px 0;
-    justify-content: space-between;
+    width: 25%;
+    height: 50vh;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.car-item-img {
+    width: 50%;
 }
 .car-item-box {
     width: 33%;
     gap: 15px;
+    background-color: #eff1fb;
+}
+.car-item-box h1,
+.car-item-box h3,
+.car-item-box h4 {
+    margin: 1px 0;
 }
 /* Inventory [END] */
 
@@ -725,6 +839,15 @@ textarea {
     #navBar__wrapper a.icon {
         /* float: right; */
         display: block;
+    }
+    #navBar__wrapper_a {
+        background-color: #0b1540;
+        margin: 0 10px;
+        padding: 0 10px;
+        
+    }
+    #subtitle {
+        margin-left: 20px;
     }
     #navBar {
         flex-direction: column;

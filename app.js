@@ -40,17 +40,18 @@ app.get('/admin', (req,res) => {
     res.sendFile(`${__dirname}/admin.html`)
 })
 
-app.post('/admin', (req,res) => {
+app.post('/admin', async (req,res) => {
     var temp = 
     {
-        carName: req.body.name,
-        carDescription: req.body.carDescription,
-        price: req.body.price
+        carName: req.body.name.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+        carDescription: req.body.carDescription.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+        price: req.body.price,
+        carImg: "./imgs/MysteryCar.png"
     }
     json.push(temp);
     fs.writeFileSync(`${__dirname}/data.json`, JSON.stringify(json))
-
-    res.redirect(`${__dirname}/inventory.html`);
+    console.log(`${__dirname}/inventory.html`)
+    res.redirect(`./inventory.html`);
 })
 
 
